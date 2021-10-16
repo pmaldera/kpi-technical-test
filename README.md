@@ -10,6 +10,7 @@
 - `yarn install`
 - `yarn start`
 - Runs on http://localhost:3000/
+- If you backend runs on another port don't forget to change the `proxy` line in `package.json` with the correct port.
 ## Todolist
 ### Stage 1: REST API
 
@@ -37,7 +38,7 @@ Implement a simple web application to show the investments:
 
 ## Stacks
 ### Server
-- [django](https://www.djangoproject.com/) logic, routes, auth, validation
+- [django](https://www.djangoproject.com/) logic, routes
 
 ### App
 - [typescript](https://www.typescriptlang.org/) and types for all used packages.
