@@ -1,5 +1,3 @@
-import { CONFIG } from "../config/config";
-
 export type Investment = {
     id: number,
     titreoperation?: string,

@@ -1,13 +1,15 @@
 # KPI-technical-test
 ## Quick start
 ### Backend
+- `cd server`
 - `python manage.py migrate`
 - `python manage.py runserver`
+- Runs on http://localhost:8000/
 ### Frontend
 - `cd app`
 - `yarn install`
 - `yarn start`
-
+- Runs on http://localhost:3000/
 ## Todolist
 ### Stage 1: REST API
 
