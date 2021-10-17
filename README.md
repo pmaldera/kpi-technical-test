@@ -5,7 +5,13 @@
 - `python manage.py migrate`
 - `python manage.py runserver`
 - Runs on http://localhost:8000/
-### Frontend
+### Angular Frontend
+- `cd angular-app`
+- `npm install`
+- `ng serve --open --proxy-config proxy.conf.json`
+- Runs on http://localhost:4200/
+- If you backend runs on another port don't forget to change the `target` line in `proxy.conf.json` with the correct port.
+### React Frontend (yes I misread the instructions in the email so I made two fronts...)
 - `cd app`
 - `yarn install`
 - `yarn start`
@@ -40,7 +46,12 @@ Implement a simple web application to show the investments:
 ### Server
 - [django](https://www.djangoproject.com/) logic, routes
 
-### App
+### Angular App
+- [typescript](https://www.typescriptlang.org/) and types for all used packages.
+- [reach router](https://reach.tech/router/) smaller and lighter router than React Router.
+- [angular-google-charts](https://github.com/FERNman/angular-google-charts) charts.
+
+### React App
 - [typescript](https://www.typescriptlang.org/) and types for all used packages.
 - [reach router](https://reach.tech/router/) smaller and lighter router than React Router.
 - [react-google-charts](https://react-google-charts.com/) charts.

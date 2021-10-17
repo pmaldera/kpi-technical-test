@@ -1,0 +1,49 @@
+
+
+<div class="list">
+  <h1>Investissements ville de Paris</h1>
+  
+  <google-chart
+      [type]="chartData['type']"
+      [title]= "chartData['title']"
+      [columns]="chartData['columns']"
+      [data]="chartData['data']"
+      [width]="500"
+      [height]="300"
+  >
+    
+</google-chart>
+<div class="filter-bar">
+    <select name="ville" value={state.filter.ville} (change)="filterValueChangeHandler($event.target)">
+      <option value="">Toutes les villes</option>
+      <option *ngFor="let v of filterData['ville']" value="{{v}}">{{v}}</option>
+    </select>
+    <select name="etat_d_avancement" value={state.filter.etat_d_avancement} (change)="filterValueChangeHandler($event.target)">
+      <option value="">Tous les états d'avancement</option>
+      <option *ngFor="let v of filterData['etat_d_avancement']" value="{{v}}">{{v}}</option>
+    </select>
+</div>
+  <table *ngIf="investments; else msg">
+    <thead>
+      <tr>
+        <td>Identifiant</td>
+        <td>Titre d'opération</td>
+        <td>Ville</td>
+        <td>Lycée</td>
+        <td>Etat d'avancement</td>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let investment of investments">
+            <td>{{investment.id}}</td>
+            <td><a href="/investment/{{investment.id}}">{{investment.titreoperation}}</a></td>
+            <td>{{investment.ville}}</td>
+            <td>{{investment.lycee}}</td>
+            <td>{{investment.etat_d_avancement}}</td>
+        </tr>
+    </tbody>
+  </table>
+  <ng-template #msg>
+    <p>Merci d'effectuer une recherche.</p>
+    </ng-template>
+</div>

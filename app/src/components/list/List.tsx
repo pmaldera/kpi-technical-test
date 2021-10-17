@@ -27,8 +27,6 @@ function List(props: RouteComponentProps) {
     getInvestments(state.filter).then(
       results => {
         setState({...state , 'data': results})
-        //@ts-ignore
-        console.log(JSON.stringify([['test','test'],...state.data.map(i => [i.lycee, parseFloat(i.enveloppe_prev_en_meu)])]));
       }
     );
   }
@@ -37,7 +35,6 @@ function List(props: RouteComponentProps) {
     getInvestmentsFilterValues().then(
       results => {
         let currentFilters = {...state.filterData};
-        console.log(currentFilters);
         currentFilters['ville'] = results.ville;
         currentFilters['etat_d_avancement'] = results.etat_d_avancement;
         setState({...state, filterData: currentFilters});

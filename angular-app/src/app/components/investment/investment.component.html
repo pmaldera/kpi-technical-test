@@ -1,0 +1,8 @@
+<div class="investment">
+    <h2>{{investment?.titreoperation}} à {{investment?.ville}}</h2>
+      <div class="attributes">
+          <p *ngFor="let item of investment | keyvalue">
+              <b>{{item.key}}</b> {{item.value}}
+          </p>
+      </div>
+  </div>
